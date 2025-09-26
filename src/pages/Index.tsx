@@ -1,13 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { motion } from 'framer-motion';
+import Layout from '@/components/layout/Layout';
+import Hero from '@/components/sections/Hero';
+import RestaurantGrid from '@/components/sections/RestaurantGrid';
+import DonationSection from '@/components/sections/DonationSection';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Layout>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Hero />
+        <RestaurantGrid />
+        <DonationSection />
+      </motion.div>
+    </Layout>
   );
 };
 
