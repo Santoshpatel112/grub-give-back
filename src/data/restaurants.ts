@@ -74,6 +74,7 @@ export const sampleRestaurants: Restaurant[] = [
     donationMealsAvailable: 12,
     description: "Authentic North Indian flavors with a commitment to community feeding",
     address: "MG Road, Sector 14, Gurgaon",
+    distance: 2.1, // <-- Added
     priceRange: "mid",
     isOpen: true,
     tags: ["Donation Partner", "Popular", "Fast Delivery"],
@@ -118,6 +119,7 @@ export const sampleRestaurants: Restaurant[] = [
     donationMealsAvailable: 8,
     description: "Farm-to-table healthy meals with zero waste philosophy",
     address: "DLF Phase 2, Gurgaon",
+    distance: 3.5, // <-- Added
     priceRange: "premium",
     isOpen: true,
     tags: ["Healthy", "Eco-Friendly", "Donation Partner"],
@@ -148,6 +150,7 @@ export const sampleRestaurants: Restaurant[] = [
     isDonationPartner: false,
     description: "Authentic street food flavors delivered to your doorstep",
     address: "Old Gurgaon, Sector 4",
+    distance: 1.2, // <-- Added
     priceRange: "budget",
     isOpen: true,
     tags: ["Budget Friendly", "Quick Bites", "Popular"],
@@ -178,6 +181,7 @@ export const sampleRestaurants: Restaurant[] = [
     donationMealsAvailable: 15,
     description: "Wood-fired pizzas with fresh ingredients and community spirit",
     address: "Cyber City, DLF Phase 3",
+    distance: 4.0, // <-- Added
     priceRange: "mid",
     isOpen: true,
     tags: ["Wood Fired", "Donation Partner", "Italian"],
@@ -209,6 +213,7 @@ export const sampleRestaurants: Restaurant[] = [
     donationMealsAvailable: 20,
     description: "Authentic Hyderabadi biryanis with aromatic spices and charitable heart",
     address: "Sector 29, Gurgaon",
+    distance: 2.8, // <-- Added
     priceRange: "mid",
     isOpen: true,
     tags: ["Authentic", "Biryani Specialist", "Donation Partner"],
