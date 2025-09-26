@@ -11,6 +11,7 @@ export interface Restaurant {
   donationMealsAvailable?: number;
   description: string;
   address: string;
+  distance: number;
   priceRange: 'budget' | 'mid' | 'premium';
   isOpen: boolean;
   tags: string[];

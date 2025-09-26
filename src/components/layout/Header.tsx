@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import { Search, ShoppingCart, User, Heart, MapPin } from 'lucide-react';
+import { Search, ShoppingCart, User, Heart, MapPin, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -15,18 +16,36 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div 
-            className="flex items-center space-x-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >
-            <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <Heart className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-gradient-primary">
-              FoodieDonor
-            </span>
-          </motion.div>
+          <Link to="/">
+            <motion.div 
+              className="flex items-center space-x-2"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
+                <Heart className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gradient-primary">
+                FoodieDonor
+              </span>
+            </motion.div>
+          </Link>
+
+          {/* Navigation Links - Desktop */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            <Link to="/restaurants" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
+              Browse Restaurants
+            </Link>
+            <Link to="/donate" className="text-sm font-medium text-muted-foreground hover:text-foreround transition-smooth">
+              Make a Donation
+            </Link>
+            <Link to="/requests" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
+              View Requests
+            </Link>
+            <Link to="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth">
+              How It Works
+            </Link>
+          </nav>
 
           {/* Location */}
           <div className="hidden md:flex items-center space-x-2 text-sm text-muted-foreground">
@@ -75,10 +94,17 @@ const Header = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button variant="ghost" size="icon">
-                <User className="w-5 h-5" />
-              </Button>
+              <Link to="/login">
+                <Button variant="ghost" size="icon">
+                  <User className="w-5 h-5" />
+                </Button>
+              </Link>
             </motion.div>
+
+            {/* Mobile menu button */}
+            <Button variant="ghost" size="icon" className="lg:hidden">
+              <Menu className="w-5 h-5" />
+            </Button>
           </div>
         </div>
       </div>
